@@ -1,14 +1,27 @@
-function displayTriviaInfo(){
-    var question = $(this).attr("data-name");
-    var queryUrl = "https://opentdb.com/api.php?amount=10";
- 
-    $.ajax({
-        url : queryUrl,
-        method : "get"
-    }).then(function(response){
-        console.log(response);
+
+$(document).ready(function(){
+});
+function intializeGame(){
+
+   
+    var arrayQuestions = [
+       "what is the color",
+       "what time is it",
+    ]
+};
+
+    function getQuestion(){
+      ind =  Math.floor(Math.random()* arrayQuestions.length);
+      gameQuestion = ind[arrayQuestions];
+      $("#trivia-questions").append($(gameQuestion));
+
     }
+   
+    
+    
+    
 
-    })
 
-}
+$("#startBtn").on("click", function() {
+    initializeGame();
+});

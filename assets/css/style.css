@@ -2,3 +2,8 @@ body {
     background-image: url('../images/bg.jpg');
     background-size: cover;
 }
+
+#trivia-questions{
+    color: white;
+    border-top: 50px;
+}
